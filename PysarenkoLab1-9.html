@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна №1. Сторінка про себе</title>
+    <meta name="description" content="Лабораторна робота №1. Веб-сторінка з інформацією про себе та хобі.">
+    <meta name="keywords" content="HTML, лабораторна робота, студент, хобі, програмування">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #333333;
+            font-family: Arial, sans-serif;
+            text-align: justify;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #003366;
+        }
+
+        p {
+            font-size: large;
+        }
+
+        a {
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .signature {
+            margin-top: 40px;
+            font-style: italic;
+            text-align: right;
+        }
+
+        pre {
+            background: #eeeeee;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: "Courier New", monospace;
+        }
+
+        .task {
+            color: #003366;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Про себе</h1>
+    <p>Привіт, я <b><i>Коля</i></b>. Я студент, навчаюся <u>програмуванню</u> і цікавлюся сучасними технологіями.
+        Люблю дізнаватися нове і займатися <b>саморозвитком</b>.</p>
+    <p>Для мене <u>програмування</u> це можливість створювати щось нове та корисне для людей,
+        а також проявляти <i>креативність</i> у процесі навчання.</p>
+
+
+    <h1>Моє хобі</h1>
+    <p>У вільний час я люблю проводити години за <u>комп’ютером</u>,
+        вивчаючи щось нове та цікаве. Люблю читати, дивитися фільми та серіали, грати в комп'ютерні ігри та <b>шахи</b>.
+        Це допомагає мені розвивати креативність і <i>мислення</i>.</p>
+
+    <h2>Програмування</h2>
+    <pre>
+    #Фрагмент навчання персептрона логічній операції AND 
+    for epoch in range(10):
+        for x, target in zip(X, Y):
+            z = w1 * x[0] + w2 * x[1] + b
+            prediction = step(z)
+
+            error = target - prediction
+
+            w1 = w1 + learning_rate * error * x[0]
+            w2 = w2 + learning_rate * error * x[1]
+            b = b + learning_rate * error  
+    </pre>
+    <p class="task"><a href="/lab1/task1.html">Завдання 1</a> Створення найпростішого файлу HTML</p>
+    <p class="task"><a href="/lab1/task2.html">Завдання 2</a> Використання тегів переводу рядка та абзацу</p>
+    <p class="task"><a href="/lab1/task3.html">Завдання 3</a> Виділення фрагментів тексту</p>
+    <p class="task"><a href="/lab1/task4.html">Завдання 4</a> Використання стилів заголовку</p>
+    <p class="task"><a href="/lab1/task5.html">Завдання 5</a> Встановлення розміру поточного шрифту</p>
+    <p class="task"><a href="/lab1/task6.html">Завдання 6</a> Встановлення гарнітури та розміру шрифту</p>
+    <p class="task"><a href="/lab1/task7.html">Завдання 7</a> Вирівнювання тексту по горизонталі</p>
+    <p class="task"><a href="/lab1/task8.html">Завдання 8</a> Встановлення кольору фону та тексту</p>
+    <div class="signature">
+        Студент групи 301-ТН Писаренко М.Ю.
+    </div>
+</body>
+
+</html>
