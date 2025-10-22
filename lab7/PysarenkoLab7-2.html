@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма з усіма елементами</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin: 10px 0;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover,
+        input[type="button"]:hover {
+            background-color: #2980b9;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Форма з усіма типами елементів</h2>
+
+    <form action="/lab7/additional/submit.html" method="get" target="_blank">
+        <div class="form-group">
+            <label for="name">Текстове поле (TEXT):</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" maxlength="50">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Пароль (PASSWORD):</label>
+            <input type="password" id="password" name="password" placeholder="Введіть пароль">
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Текстова область (TEXTAREA):</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Введіть ваші коментарі..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="city">Випадаючий список (SELECT):</label>
+            <select id="city" name="city">
+                <option value="">-- Оберіть місто --</option>
+                <option value="poltava">Полтава</option>
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="odesa">Одеса</option>
+                <option value="kharkiv">Харків</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Прапорці (CHECKBOX):</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="html" name="skills" value="html">
+                <label for="html">HTML</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="css" name="skills" value="css">
+                <label for="css">CSS</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="js" name="skills" value="js">
+                <label for="js">JavaScript</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Радіокнопки (RADIO):</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Чоловіча</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Жіноча</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="file">Завантаження файлу (FILE):</label>
+            <input type="file" id="file" name="file">
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Відправити дані">
+            <input type="reset" value="Очистити форму">
+        </div>
+    </form>
+</body>
+
+</html>

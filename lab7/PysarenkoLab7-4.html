@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення товару</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4fcff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background-color: #e6f8ff;
+            border: 2px solid #77b9c6;
+            border-radius: 5px;
+            padding: 20px 30px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #007799;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .payment {
+            margin-top: 10px;
+        }
+
+        .options {
+            margin-top: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            margin: 5px;
+            padding: 6px 15px;
+            border: 1px solid #777;
+            border-radius: 3px;
+            background-color: #f8f8f8;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #dff6ff;
+        }
+
+        select[multiple] option {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        select[multiple] option:hover {
+            background-color: #dff6ff;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin: 5px 0;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-left: 5px;
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"],
+        .checkbox-group input[type="checkbox"] {
+            margin: 0;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Форма замовлення товару</h2>
+        <form action="/lab7/additional/submit.html" method="get" target="_blank">
+            <label for="bank">Номер банківського рахунку</label>
+            <input type="text" id="bank" name="bank" maxlength="20" placeholder="Введіть номер рахунку">
+
+            <label for="usernum">Особистий номер користувача</label>
+            <input type="text" id="usernum" name="usernum" maxlength="20" placeholder="Введіть ваш номер">
+
+            <label for="products">Оберіть товари</label>
+            <select id="products" name="products" multiple size="4">
+                <option value="notebook">Ноутбук</option>
+                <option value="smartphone">Смартфон</option>
+                <option value="mouse">Комп'ютерна миша</option>
+                <option value="keyboard">Клавіатура</option>
+                <option value="monitor">Монітор</option>
+            </select>
+
+            <label for="comment">Коментар</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Ваші побажання або коментарі..."></textarea>
+
+            <div class="payment">
+                <label>Вид оплати</label>
+                <div class="radio-group">
+                    <input type="radio" id="cash" name="payment" value="cash">
+                    <label for="cash">Готівковий</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="noncash" name="payment" value="noncash">
+                    <label for="noncash">Безготівковий</label>
+                </div>
+            </div>
+
+            <div class="options">
+                <label>Додаткова інформація, яку бажаєте отримати</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="balance" name="info_balance" value="yes">
+                    <label for="balance">Дані про залишки на рахунку</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="payments" name="info_payments" value="yes">
+                    <label for="payments">Список останніх виплат по рахунку</label>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <input type="reset" value="Очистити форму">
+                <input type="submit" value="Надіслати замовлення">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
